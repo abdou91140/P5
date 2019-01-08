@@ -42,3 +42,5 @@ if (typeSentence === "2")  {
  }
 
 choice();
+
+choice();
