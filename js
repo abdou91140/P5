@@ -1,3 +1,4 @@
+
 var numberChoice = (prompt(""));
 var typeSentence = (prompt(""));
 
@@ -13,34 +14,35 @@ var secondePart2 = ["baigne", "brise", "balade", "balance", "balaye", "banni", "
 var thirdPart2 = ["Rihanna", "le jeune buffle", "moi", "le pouvoir", "une pomme", "un sage , un saint"];
 var lastPart2 = [".", "!", "?"];
 
-//* variable concatené parla fonction ramdomSentence
 
 
-//* variable concatené parla fonction ramdomSentence
-var type1, type2;
- type1 = ramdomSentence(firstPart1)+ " " +ramdomSentence(secondePart1)+ " " +ramdomSentence(thirdPart1)+ " " +ramdomSentence(lastPart1);
- type2 = ramdomSentence(firstPart2)+ " " +ramdomSentence(secondePart2)+ " " +ramdomSentence(thirdPart2)+ " " +ramdomSentence(lastPart2);
+
+//* fonction qui agis sur le nombre de phrase et le type de phrase
+function sentenceMaker(){
+   var type1, type2;
 
 //* création de la fonction pour générer aléatoirement les blocs de citations
 function ramdomSentence(array) { 
   return array[Math.floor(Math.random() * array.length)]
  }
-
-//* fonction qui agis sur le nombre de phrase et le type de phrase
-function choice(){
-   
    for(var i = 0 ; i < (numberChoice); i++) { 
    
-  if (typeSentence === "1") { 
-    
+  if (typeSentence === "1") { //* variable concatené parla fonction ramdomSentence
+     type1 = ramdomSentence(firstPart1)+ " " +ramdomSentence(secondePart1)+ " " +ramdomSentence(thirdPart1)+ " " +ramdomSentence(lastPart1);
+
   console.log(type1); }
 
 if (typeSentence === "2")  { 
-  console.log (type2) ;}
- else { alert("Mauvais numéro");}
-    }
- }
+   type2 = ramdomSentence(firstPart2)+ " " +ramdomSentence(secondePart2)+ " " +ramdomSentence(thirdPart2)+ " " +ramdomSentence(lastPart2);
 
-choice();
+  console.log (type2) ;}
+     
+ else { 
+   alert("Mauvais numéro");}
+    }
+  return
+ }
+  
+sentenceMaker();
 
 choice();
