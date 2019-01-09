@@ -32,7 +32,7 @@ function ramdomSentence(array) {
 
   console.log(type1); }
 
-if (typeSentence === "2")  { 
+else if (typeSentence === "2")  { 
    type2 = ramdomSentence(firstPart2)+ " " +ramdomSentence(secondePart2)+ " " +ramdomSentence(thirdPart2)+ " " +ramdomSentence(lastPart2);
 
   console.log (type2) ;}
